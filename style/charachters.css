@@ -33,7 +33,7 @@ img {
 }
 
 .group button {
-  background-color: transparent;
+  background-color: white;
   outline: none;
   cursor: pointer;
   grid-column: 1 / -1;
@@ -41,8 +41,7 @@ img {
   justify-self: center;
   padding: 6px;
   border-radius: 20px;
-  border-width: 0.1px;
-  border-color: #90ee90;
+  border: none;
 }
 
 .charactersItem {
@@ -57,4 +56,13 @@ img {
 .selected {
   border: 3px solid #90ee90;
   box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+}
+
+.nextBtn {
+  margin-bottom: 20px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  border: none;
+  display: none;
+  cursor: pointer;
 }

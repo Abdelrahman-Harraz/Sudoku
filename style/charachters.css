@@ -1,0 +1,60 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+img {
+  width: 100px;
+}
+
+.mainContainer {
+  flex-direction: column;
+  border-radius: 15px;
+  width: fit-content;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
+}
+
+.group {
+  background-color: #d3d3d375;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: 30px;
+  padding: 15px;
+  border-radius: 15px;
+  width: fit-content;
+  margin: 30px;
+}
+
+.group button {
+  background-color: transparent;
+  outline: none;
+  cursor: pointer;
+  grid-column: 1 / -1;
+  width: fit-content;
+  justify-self: center;
+  padding: 6px;
+  border-radius: 20px;
+  border-width: 0.1px;
+  border-color: #90ee90;
+}
+
+.charactersItem {
+  border-radius: 15px;
+  width: fit-content;
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.selected {
+  border: 3px solid #90ee90;
+  box-shadow: 0 0 15px rgba(76, 175, 80, 0.4);
+}

@@ -1,0 +1,89 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100px;
+  margin: 10px;
+  background-color: rgba(128, 128, 128, 0.769);
+  border-radius: 10px;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.timerContainer,
+.userName {
+  color: white;
+  background-color: rgba(128, 128, 128, 0.769);
+  border-radius: 10px;
+  padding: 10px;
+  margin-left: 30px;
+  margin-right: 30px;
+
+}
+
+.upperRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 10px 40px;
+  box-sizing: border-box;
+  margin: 20px;
+}
+
+.upperRow .images {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.gameBoard {
+  width: fit-content;
+  border-radius: 10px;
+  background-color: rgba(128, 128, 128, 0.769);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.sudokuTable {
+  border-collapse: collapse;
+  background-color: rgba(128, 128, 128, 0.3);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.cell {
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background-color: rgba(128, 128, 128, 0.7);
+  border: 2px solid white;
+  border-radius: 10px;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.cell:hover {
+  background-color: #4caf50;
+  transform: scale(1.05);
+  cursor: pointer;
+}
+
+.startBtn {
+  margin-top: 30px;
+  padding: 10px 20px;
+  font-size: 16px;
+  color: white;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+

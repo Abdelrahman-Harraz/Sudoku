@@ -42,9 +42,6 @@ window.addEventListener("load", function () {
 
       localStorage.setItem("username", value);
       localStorage.setItem("level", levelValue);
-
-      console.log("Saved username:", value);
-      console.log("Saved level:", levelValue);
     }
   });
 });

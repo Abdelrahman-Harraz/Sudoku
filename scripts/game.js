@@ -51,6 +51,8 @@ function levelCellsToRemove(level) {
       return 10;
     case "hard":
       return 15;
+    default:
+      return 5;
   }
 }
 
@@ -119,7 +121,6 @@ function selectCell(e) {
   selectedCell = cell;
 }
 
-
 charImages.forEach((img, index) => {
   img.addEventListener("click", () => {
     if (!gameStarted) return;
@@ -159,7 +160,6 @@ function placeCharacter() {
   } else {
     selectedCell.classList.add("incorrect");
 
-
     setTimeout(() => {
       selectedCell.classList.remove("incorrect");
     }, 500);
@@ -174,7 +174,6 @@ function checkCompletion() {
   for (let row = 0; row < 4; row++) {
     for (let col = 0; col < 4; col++) {
       if (gameBoard[row][col] !== solution[row][col]) {
-
         complete = false;
         break;
       }
@@ -185,9 +184,7 @@ function checkCompletion() {
   if (complete) {
     stopTimer();
     setTimeout(() => {
-      alert(
-        `Congratulations ${userName}! You completed the Game!!!`
-      );
+      alert(`Congratulations ${userName}! You completed the Game!!!`);
     }, 300);
   }
 }

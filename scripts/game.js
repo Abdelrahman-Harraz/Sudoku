@@ -104,16 +104,21 @@ function renderBoard() {
 
 function selectCell(e) {
   if (!gameStarted) return;
+
+  const cell = e.currentTarget;
+
+  if (cell.classList.contains("prefilled")) return;
+
   document.querySelectorAll(".cell").forEach((c) => {
     c.classList.remove("selected");
     c.style.borderColor = "#fff";
   });
 
-  const cell = e.currentTarget;
   cell.classList.add("selected");
   cell.style.borderColor = "#ff9800";
   selectedCell = cell;
 }
+
 
 charImages.forEach((img, index) => {
   img.addEventListener("click", () => {
@@ -153,7 +158,7 @@ function placeCharacter() {
     selectedCell.classList.add("correct");
   } else {
     selectedCell.classList.add("incorrect");
-    selectedCell.style.borderColor = "red";
+
 
     setTimeout(() => {
       selectedCell.classList.remove("incorrect");
